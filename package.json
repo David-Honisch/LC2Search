@@ -1,0 +1,66 @@
+{
+  "name": "LC2RateMyPosts",
+  "version": "1.0.0",
+  "description": "LetzteChance.Org Hybrid Application for Windows,Android and IOS",
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-builder": "^19.48.3",
+    "electron-packager": "^10.1.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build",
+    "package-mac": "electron-packager . lc2search --overwrite --platform=darwin --arch=x64 --icon=./favicon.ico.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . lc2search --overwrite --asar=true --platform=win32 --arch=ia32 --icon=./favicon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"LC2Search\"",
+    "package-linux": "electron-packager . lc2search --overwrite --asar=true --platform=linux --arch=x64 --icon=./32x32.png --prune=true --out=release-builds"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "LC2RateMyPosts",
+    "Links,Urls,Documents,Movies/Tv-Series,Audio",
+    "Search",
+    "demo"
+  ],
+  "author": "David Honisch",
+  "license": "MIT",
+  "build": {
+    "appId": "org.letztechance.LC2PostsApp",
+    "copyright": "Copyright © 2018 ${David Honisch}",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "title": "LC2RateMyPosts",
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cordova-plugin-http": "^1.2.0",
+    "html-extractor": "^0.2.2",
+    "htmlparser2": "^3.9.2",
+    "imdb-api": "^3.1.2",
+    "shelljs": "^0.8.1"
+  }
+}

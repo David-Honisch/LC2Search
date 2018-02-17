@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<!--
+	David Honisch
+-->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>LC2PostsApp</title>
+	<link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li>
+						<a href="#intro">Welcome</a>
+					</li>
+					<li>
+						<a href="#news">News</a>
+					</li>
+					<li>
+						<a href="#one">Search</a>
+					</li>
+					<li>
+						<a href="#index">Foren</a>
+					</li>
+					<li>
+						<a href="#games">Games</a>
+					</li>
+					<li>
+						<a href="#three">Contact</a>
+					</li>
+					<li>
+						<a href="#imprint">Imprint</a>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>LC2PostsApp</h1>
+				<h3>LetzteChance.Org - Official Search Browser</h3>
+				<p>Supports:HTTPS,
+					<a href="#two" class="button scrolly">IMDB</a> and different Search APIs like Google Maps
+					<br/> Build for Microsoft Windows, MacOs and Linux (Redhat)<br/>
+					<!-- <a href="./LC2Intro2.0/index.html" target="_blank">Openlink</a> -->
+				</p>
+				<!-- <ul class="actions">
+								<li><a href="#one" class="button scrolly">Let's begin</a></li>								
+							</ul>							 -->
+				<form id="film" action="">
+					<fieldset>
+						<div class="input-group">
+							<input class="input-group-field" type="text" id="query" placeholder="Enter pattern" />
+						</div>
+						<div class="input-group-button actions submit">
+							<button name="submit" type="button" class="button" id="submitsearch">Search</button>
+						</div>
+					</fieldset>
+				</form>
+				<div id="searchresults"></div>
+				<div id="error"></div>
+
+			</div>
+		</section>
+		<!-- News -->
+		<section id="news" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>News</h1>
+				<div id="newsresults">Loading...</div>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style1 spotlights">
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h2> Search</h2>
+
+						<div class="columns">
+							<form id="film" action="">
+								<fieldset>
+									<div class="input-group">
+										<input class="input-group-field" type="text" id="title" placeholder="Enter pattern" />
+									</div>
+									<div class="input-group-button actions submit">
+										<button name="submit" type="button" class="button" id="submitbutton">Search</button>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style1 fade-up toggle">
+			<div class="inner ">
+				<h2 style="align:center;">Search Results :</h2>
+				<div class="row container" id="result">
+
+					<div class="small-12 medium-4 columns">
+						<img id="result--poster" src="" />
+					</div>
+					<div id="info" class="small-12 medium-4 columns">
+						<div class="row">
+							<label>Movie :</label>
+							<span id="result--title"></span>
+						</div>
+						<div class="row">
+							<label>Year :</label>
+							<span id="result--year"></span>
+						</div>
+						<div class="row">
+							<label>Rated :</label>
+							<span id="result--rated"></span>
+						</div>
+						<div class="row">
+							<label>Release Date :</label>
+							<span id="result--release"></span>
+						</div>
+						<div class="row">
+							<label>Running Time :</label>
+							<span id="result--runtime"></span>
+						</div>
+						<div class="row">
+							<label>Genres :</label>
+							<span id="result--genres"></span>
+						</div>
+						<div class="row">
+							<label>director :</label>
+							<span id="result--director"></span>
+						</div>
+						<div class="row">
+							<label>Writers :</label>
+							<span id="result--writer"></span>
+						</div>
+						<div class="row">
+							<label>Actors :</label>
+							<span id="result--actors"></span>
+						</div>
+						<div class="row">
+							<label>Plot :</label>
+							<span id="result--plot"></span>
+						</div>
+						<div class="row">
+							<label>Languages :</label>
+							<span id="result--languages"></span>
+						</div>
+						<div class="row">
+							<label>Country :</label>
+							<span id="result--country"></span>
+						</div>
+						<div class="row">
+							<label>Awards :</label>
+							<span id="result--awards"></span>
+						</div>
+						<div class="row">
+							<label>Rating :</label>
+							<span id="result--rating"></span>
+						</div>
+						<div class="row">
+							<label>Votes :</label>
+							<span id="result--votes"></span>
+						</div>
+						<div class="row">
+							<label>Type :</label>
+							<span id="result--type"></span>
+						</div>
+						<div class="row">
+							<label>URL :</label>
+							<span id="result--imdburl"></span>
+						</div>
+					</div>
+
+					<ul class="actions">
+						<li id="imdblink">
+							<a href="http://letztechance.org" class="button">Learn more</a>
+						</li>
+					</ul>
+				</div>
+		</section>
+
+		<!-- index -->
+		<section id="index" class="wrapper style1 spotlights">
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h2> Index</h2>
+
+						<div class="columns">
+							<div id="indexresults">Loading...</div>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- games -->
+		<section id="games" class="wrapper style1 spotlights">
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h2> Index</h2>
+
+						<div class="columns">
+							<div id="gamesresults">Loading...</div>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Three -->
+		<section id="three" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Contact</h2>
+				<div class="split style1">
+					<section>
+						<ul class="contact">
+							<li>
+								<h3>Email</h3>
+								<a href="http://letztechance.org/contact.html">Contact</a>
+							</li>
+							<li>
+								<h3>Homepage</h3>
+								<ul class="icons">
+									<li>
+										<a href="http://letztechance.org/contact.html?l=de_DE" class="fa-facebook">
+											<span class="label">Contact</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://letztechance.org/contact.html?l=de_DE">Contact</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Imprint -->
+		<section id="imprint" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>News</h1>
+				<div id="imprintresult">Loading...</div>
+			</div>
+		</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<script>
+			window.$ = window.jQuery = require('./assets/js/jquery.min.js');
+		</script>
+
+		<script src="./api.js"></script>
+		<script src="./imdb.api.js"></script>
+		<script src="./renderer.js"></script>
+
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+
+
+		<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
