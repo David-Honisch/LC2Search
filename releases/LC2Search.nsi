@@ -380,9 +380,10 @@ Section "CreateShortCuts"
  CreateDirectory $SMPROGRAMS\$R0
  CreateDirectory $SMPROGRAMS\$R0\LETZTECHANCE.ORG
  CreateDirectory $SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search
- ;CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\Start LC2Search.lnk" $INSTDIR\start.bat
- CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\LC2Search.lnk" $INSTDIR\LC2Start.NET.exe
- CreateShortCut "$INSTDIR\launcher.lnk" $INSTDIR\LC2Start.NET.exe
+ CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\Start.LC2Launcher.lnk" $INSTDIR\LC2Search.exe
+ CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\LC2Search.lnk" $INSTDIR\LC2Search.exe
+ CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\_LC2Launcher.lnk" $INSTDIR\LC2Search.exe
+ CreateShortCut "$INSTDIR\Update.lnk" $INSTDIR\LC2Start.NET.exe
  CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\AutoStart.lnk" $INSTDIR\LC2autostart.exe
  CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\AutoStartConfig.lnk" $INSTDIR\LC2autostartConfig.exe
  CreateShortCut "$SMPROGRAMS\$R0\LETZTECHANCE.ORG\LC2Search\AutoStartUninstall.lnk" $INSTDIR\LC2autostartUninstall.exe
