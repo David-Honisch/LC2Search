@@ -12,7 +12,7 @@ HttpRequest.prototype.getIndex = function () {
         if (!error && response.statusCode === 200) {
             var result = '';
             for (var v in body) {
-                result += "<a href=\"./LC2Intro2.0/index.html?q=http://letztechance.org/list-"+ body[v].id + "-1.html\" target=\"_blank\">"+ body[v].name + "</a><br/>";
+                result += "<a href=\"http://letztechance.org/LC2Intro2.0/index.html?q=http://letztechance.org/list-"+ body[v].id + "-1.html\" target=\"_blank\">"+ body[v].name + "</a><br/>";
             }
             document.getElementById("indexresults").innerHTML = "" + result;
         }
@@ -29,7 +29,7 @@ HttpRequest.prototype.getNews = function () {
         if (!error && response.statusCode === 200) {
             var result = '';
             for (var v in body) {
-                result += "<a href=\"./LC2Intro2.0/index.html?q=http://letztechance.org/read-1-"+ body[v].id + ".html\" target=\"_blank\">"+ body[v].subject + "</a><br/>";
+                result += "<a href=\"http://letztechance.org/LC2Intro2.0/index.html?q=http://letztechance.org/read-1-"+ body[v].id + ".html\" target=\"_blank\">"+ body[v].subject + "</a><br/>";
             }
             document.getElementById("newsresults").innerHTML = "" + result;
         }
@@ -65,7 +65,7 @@ HttpRequest.prototype.getSearch = function (pattern) {
             var result = '';
             for (var v in body) {
                 // result += body[v].subject + "<br/>";
-                result += "<a href=\"./LC2Intro2.0/index.html?q=http://letztechance.org/read-1-"+ body[v].id + ".html\" target=\"_blank\">"+ body[v].subject + "</a><br/>";
+                result += "<a href=\"http://letztechance.org/LC2Intro2.0/index.html?q=http://letztechance.org/read-1-"+ body[v].id + ".html\" target=\"_blank\">"+ body[v].subject + "</a><br/>";
             }
             document.getElementById("searchresults").innerHTML = "<hr>" + result;
         }
